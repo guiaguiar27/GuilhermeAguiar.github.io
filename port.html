@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang = "pt-br"> 
+    <head> 
+        <meta charset= "utf-8">
+        <title>Portifólio</title> 
+        <style type="text/css"> 
+            body{ 
+                font-family: 'Open Sans',Arial, sans-serif; 
+                font-size:  15px; 
+                background: #ccc; 
+                color: #fff; 
+                overflow: hidden; 
+                  
+             } 
+            .container{ 
+                position: absolute; 
+                left: 0;
+                top: 0; 
+                width: 100%; 
+                height: 100%; 
+
+            } 
+            .container > input,  
+            .container > span{ 
+                position: fixed; 
+                bottom: 0  ; 
+                width: 20% ; 
+                height: 34px; 
+                line-height: 34px ; 
+                cursor: pointer; 
+            } 
+            .container > span { 
+                background:  #fff; 
+                font-size: 16px; 
+                font-weight: bold; 
+                color : #48b188 ; 
+                text-align:  center; 
+                z-index:10 ;  
+            }  
+            .container { 
+                z-index: 15; 
+                opacity: 0 ;
+            } 
+            #radio-nav-1, #radio-nav-1 + span{left: 0;}
+            #radio-nav-2, #radio-nav-2 + span{left: 20%;}
+            #radio-nav-3, #radio-nav-3 + span{left: 40%;}
+            .container > input:checked + span,
+            .container > input:checked:hover + span{
+                background: rgba(46, 148, 109, 1);
+                color: #fff;
+                } 
+                .container > input:checked + span::after,
+                .container > input:checked:hover + span::after{
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    position: absolute;
+                    bottom: 100%;
+                    border: solid transparent;
+                    border-bottom-color: rgba(46, 148, 109, 1);
+                    border-width: 15px;
+                    left: 50%;
+                    margin-left: -15px;
+                } 
+                .container > input:hover + span{
+                    background: rgba(46, 148, 109, .8);
+                    color: #fff;
+                }  
+                .scroll, 
+                .selection{ 
+                    position: relative; 
+                    width: 100%; 
+                    height: 100%; 
+                    left : 0 ; 
+                    top :0; 
+                    transition: all .6s ease-in-out ;
+                }
+                .selection{ 
+                    overflow: hidden;
+                } 
+                #section-1{background: #f47933;}
+                #section-2{background: #008fd5;}
+                #section-3{background: #3f689e;}
+
+            h1{  
+
+                font-family: Arial, Helvetica, sans-serif; 
+                font-style: oblique;  
+                font-variant: normal; 
+                font-weight: bold; 
+                font-size: 25px; 
+
+
+            } 
+            p{ 
+                font-family: Arial, Helvetica, sans-serif; 
+                font-style: oblique;  
+                font-variant: normal; 
+                font-weight: bold; 
+                font-size: 15px;  
+                line-height: 1.5;  
+                margin-bottom: 0; 
+            } 
+            p + p { 
+                text-indent: 1.5em; 
+                text-align: right;
+                margin-top: 0  
+
+            } 
+        *{ 
+            margin: 0; 
+            padding: 0; 
+
+        } 
+        </style> 
+    </head> 
+    <body>  
+        <div class=" container"> 
+         <!-- menu--> 
+         <input type="radio" name=" radio " checked = "checked" id = "radio-nav-1"/>
+         <span>Formação</span> 
+         <input type="radio" name=" radio " id = "radio-nav-2"/> 
+         <span>Experiência</span> 
+         <input type="radio" name=" radio " id = "radio-nav-3"/> 
+         <span>Quem sou eu </span>    
+        
+         <!-- Scroll + select --> 
+        <div class=" scroll">
+            <selection class=" selection" id = "selection_1"> 
+                <div class = "logo">  
+                    <span>Formação</span>   
+                </div> 
+                <h2>Formação</h2> 
+                <p>texto qualquer ... texto qualquer</p>
+            </selection> 
+            <selection class=" selection" id = "selection_2"> 
+                <div class = "logo">  
+                    <span>Experiência</span>   
+                </div> 
+                <h3>Experiência</h3> 
+                <p>texto qualquer ... texto qualquer</p>
+            </selection>  
+            <selection class=" selection" id = "selection_3"> 
+                <div class = "logo">  
+                    <span>Quem sou eu</span>   
+                </div> 
+                <h4>Quem sou eu </h4> 
+                <p>texto qualquer ... texto qualquer</p>
+            </selection>
+             
+        </div>
+        </div>
+         <h1>Guilherme Aguiar Silva Milanêz</h1> 
+         <div> 
+             <hgroup>   
+                <p>  
+                Bem vindo. <br> 
+             Aqui você obterá um pouco mais de ciência a respeito de minhas atividades profissionais, 
+             tanto na comunidade academica em meu envolvimento com a pesquisa, 
+             quanto no mercado em geral no ambito do desenvolvimento de projetos diversos.  
+              Atualmente estou me graduando em Ciência da Computação na <a href="https://www.ufv.br ">Universidade Federal de Viçosa</a> 
+             Campus Florestal,
+             concomitantemente me encontro envolvido em um projeto de iniçiação científica na área de Redes de Computadores, 
+            com especificação em redes de sensores sem fio <a href="https://www.gta.ufrj.br/ensino/eel878/redes1-2018-1/trabalhos-vf/rssf/">RSSF</a> voltadas para o desenvolvimento de IOT.  
+            </p>   
+         </hgroup> 
+        </div> 
+
+
+    </body>
+
+
+    </html>
